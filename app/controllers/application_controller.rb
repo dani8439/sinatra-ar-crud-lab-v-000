@@ -18,13 +18,13 @@ class ApplicationController < Sinatra::Base
 
   post '/posts' do
     Post.create(name: params[:name], content: params[:content])
-    
+
     redirect to '/posts'
   end
 
   get '/posts' do
     @posts = Post.all
-    
+
     erb :index
   end
 
@@ -49,6 +49,6 @@ class ApplicationController < Sinatra::Base
     erb :show
   end
 
-  delete '/posts/:id/delete' do 
+  delete '/posts/:id/delete' do
   end
 end
