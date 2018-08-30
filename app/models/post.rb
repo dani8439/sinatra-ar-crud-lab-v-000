@@ -6,12 +6,12 @@ class Post < ActiveRecord::Base
 
   def initialize(params)
     @name = params[:name]
-    @content=content
-    POSTS << self 
+    @content= params[:content]
+    POSTS << self
   end
 
-  def self.all 
-    POSTS 
+  def self.all
+    POSTS
   end
 
 end
