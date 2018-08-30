@@ -5,7 +5,7 @@ class Post < ActiveRecord::Base
   POSTS = []
 
   def initialize(params)
-    @name = name
+    @name = params[:name]
     @content=content
     POSTS << self 
   end
@@ -14,7 +14,4 @@ class Post < ActiveRecord::Base
     POSTS 
   end
 
-  def self.destroy 
-    POSTS.delete
-  end
 end
