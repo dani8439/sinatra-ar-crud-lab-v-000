@@ -15,6 +15,6 @@ class Post < ActiveRecord::Base
   end
 
   def self.destroy 
-    self.delete
+    POSTS.delete
   end
 end
