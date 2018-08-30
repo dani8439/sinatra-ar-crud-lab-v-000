@@ -23,17 +23,19 @@ class ApplicationController < Sinatra::Base
 
   get '/posts' do
     @posts = Post.all
+    
     erb :index
   end
 
   get '/posts/:id' do
     @post = Post.find(params[:id])
+
     erb :show
   end
 
   get '/posts/:id/edit' do
     @post = Post.find(params[:id])
-    
+
     erb :edit
   end
 
@@ -41,7 +43,7 @@ class ApplicationController < Sinatra::Base
     @post = Post.find(params[:id])
     @post.name = params[:name]
     @post.content = params[:content]
-    @post.save 
+    @post.save
 
     erb :show
   end
