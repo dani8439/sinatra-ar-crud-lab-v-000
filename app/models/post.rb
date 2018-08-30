@@ -13,4 +13,8 @@ class Post < ActiveRecord::Base
   def self.all 
     POSTS 
   end
+
+  def self.destroy 
+    self.delete
+  end
 end
