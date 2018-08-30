@@ -1,10 +1,12 @@
 #Placeholder for a model
 
 class Post < ActiveRecord::Base
-  attr_accessor :name, :content 
+  attr_accessor :name, :content
+  POSTS = []
 
   def initialize(name, content)
-    @name = name 
+    @name = name
     @content=content
-  end 
+    POSTS << self 
+  end
 end
