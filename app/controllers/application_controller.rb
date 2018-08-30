@@ -29,5 +29,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/posts/:id' do 
+
+    erb :show
   end
 end
