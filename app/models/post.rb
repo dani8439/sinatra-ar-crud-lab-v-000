@@ -4,7 +4,7 @@ class Post < ActiveRecord::Base
   attr_accessor :name, :content
   POSTS = []
 
-  def initialize(name, content)
+  def initialize(params)
     @name = name
     @content=content
     POSTS << self 
