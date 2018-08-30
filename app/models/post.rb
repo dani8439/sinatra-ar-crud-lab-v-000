@@ -9,4 +9,8 @@ class Post < ActiveRecord::Base
     @content=content
     POSTS << self 
   end
+
+  def self.all 
+    POSTS 
+  end
 end
